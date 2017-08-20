@@ -54,6 +54,7 @@ before_script:
 - export PATH="${HOME}/bin:${PATH}"
 
 script:
+- false
 - ./bootstrap.sh --dont-cleanup || cp build/*.rej build/*.orig $TEST_NOOK/
   && ./configure CFLAGS=-Ofast --prefix=$HOME/_install --enable-check=always
   --enable-hipagut=always --enable-debug --disable-syslog --enable-overlays
